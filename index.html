@@ -70,9 +70,9 @@
 				// collada
 
 				var loader = new THREE.ColladaLoader();
-				loader.load( 'stormtrooper.dae', function ( collada ) {
+				loader.load( 'scene.dae', function ( collada ) {
 
-					var animations = collada.animations;
+					//var animations = collada.animations;
 					var avatar = collada.scene;
 
 					avatar.traverse( function ( node ) {
@@ -85,8 +85,8 @@
 
 					} );
 
-					mixer = new THREE.AnimationMixer( avatar );
-					var action = mixer.clipAction( animations[ 0 ] ).play();
+					//mixer = new THREE.AnimationMixer( avatar );
+					//var action = mixer.clipAction( animations[ 0 ] ).play();
 
 					scene.add( avatar );
 
